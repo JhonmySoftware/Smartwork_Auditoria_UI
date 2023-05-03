@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Automatización Autogestión</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_proceso_auditoria_-_smartstock.html">Proceso Auditoria - Smartstock</a></span>
+                > <span class="truncate-60"><a
+                    href="proceso_auditoria___smartstock_proceso_auditoria___smartstock.html">Proceso Auditoria - Smartstock </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-05-2023 17:35</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Proceso Auditoria - Smartstock </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_caso01.html">Caso01
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_requerimiento01.html">Requerimiento01
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Proceso Auditoria - Smartstock
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3dc8239d946d3d06ca3fbaf37f7e9d9567dc45feca8bd4856c1c993dcbc6dd94.png" title=" Dado que existe una una solicitud de auditoria" width="1366"/>
+                <img src="3dc8239d946d3d06ca3fbaf37f7e9d9567dc45feca8bd4856c1c993dcbc6dd94.png" title=" Usuario ts abrir pagina" width="1366"/>
+                <img src="3dc8239d946d3d06ca3fbaf37f7e9d9567dc45feca8bd4856c1c993dcbc6dd94.png" title=" Usuario opens the Ob abrir pagina" width="1366"/>
+                <img src="b4ffe69188abe5b2e2ad5bc3134cd6c81145aacd61de833d4df8d4c2ca6f976d.png" title=" Usuario enters 'jhonfquinonesa' into Input para ingresar el usuario" width="1366"/>
+                <img src="4378e6ab0c2e5f6bd13054a52b30e0d75f3178621fb4d450b882bd8984bd3c85.png" title=" Usuario enters 'Puli0010***' into Input para ingresar la contrase&ntilde;a" width="1366"/>
+                <img src="dabe3d372234565852f62efdf857c22ef982f963a9a9d64f80dfb38c314433ed.png" title=" Usuario clicks on button para dar ingreso al sitio" width="1366"/>
+                <img src="dabe3d372234565852f62efdf857c22ef982f963a9a9d64f80dfb38c314433ed.png" title=" Usuario ts abrir pagina (completed)" width="1366"/>
+                <img src="6bfa3869ef37b80c48e426d4a4aaea504466829ec04d6a6fb1c0a3efa8338080.png" title=" Dado que existe una una solicitud de auditoria (completed)" width="1366"/>
+                <img src="00eb07de20457650360c882f382495e75cccc796d2e40257c6f3a3ede4b9bfe8.png" title=" Cuando Crea la orden de de auditoria" width="1366"/>
+                <img src="00eb07de20457650360c882f382495e75cccc796d2e40257c6f3a3ede4b9bfe8.png" title=" Usuario ts proceso auditoria" width="1366"/>
+                <img src="00eb07de20457650360c882f382495e75cccc796d2e40257c6f3a3ede4b9bfe8.png" title=" Usuario clicks on Bot&oacute;n de Proceso de Inventario" width="1366"/>
+                <img src="2d4444a2bdb3d6c4c62cbf249af58577efbc1cdbdb92d17e1c01f4e3f31595cc.png" title=" Usuario clicks on Bot&oacute;n de Auditoria" width="1366"/>
+                <img src="d811d07504552aa72030895276252ae4bfeafd49f802cc5557441682648e34a5.png" title=" Usuario clicks on Bot&oacute;n de + para agregar auditoria" width="1366"/>
+                <img src="c5d563b6f5c2f1a132c906d3646a81cf3f9653d8339243cb15b88611ba05f0db.png" title=" Usuario is crear auditoria01" width="1366"/>
+                <img src="c5d563b6f5c2f1a132c906d3646a81cf3f9653d8339243cb15b88611ba05f0db.png" title=" Usuario enters 'Bodega Principal' into input Seleccionar la bodega" width="1366"/>
+                <img src="9dfe91850e864a39c64de0fdcb7d059f6f594125076dc9cdb3accd0f53faab61.png" title=" Usuario clicks on Lista Seleccionar la bodega" width="1366"/>
+                <img src="a37433839951ab2adc2101972faf9273e86b3e2554caa985e08575ed9f347174.png" title=" Usuario enters 'Auditoria' into Input de Tipo de documento" width="1366"/>
+                <img src="83bf647c9e9006cdfeb74c069c2d522692054bdcdc18d90f35c77e3350b2c137.png" title=" Usuario clicks on input Lista Bot&oacute;n de Tipo de documento" width="1366"/>
+                <img src="6603bbeb97d5f4e893364b0e5fcbcf8bff0cd2e7f759011b836325b58656259b.png" title=" Usuario enters 'Divisi&oacute;n' into Input Divisi&oacute;n" width="1366"/>
+                <img src="73baa96fe56fad5a0fe49feda403b3829d270502647d6dbc20624eb3ccfcc8d1.png" title=" Usuario clicks on Lista Input Divisi&oacute;n" width="1366"/>
+                <img src="74a6b55fc686a40cb641c5b46ec7973ddc4f0f9c1107ece83754909fa84f710f.png" title=" Usuario enters 'Familia Ejemplo' into input Familia" width="1366"/>
+                <img src="789f69d506f2a9cbe5e15e2c02b291ef1bfe5ce7e50234d5c4ed25a5302421c4.png" title=" Usuario clicks on Lista Input Familia" width="1366"/>
+                <img src="d14fa571efdd621bf77f1817be941cf02b11bf05c5c7c5a78c41a0a41933d5bb.png" title=" Usuario enters 'FEFO' into &iacute;tem" width="1366"/>
+                <img src="a927a0f9b52376371a52d95c0cb625fad08cbec5087379e312fc77ae7c350502.png" title=" Usuario clicks on Lista &iacute;tem" width="1366"/>
+                <img src="9092cf751efed79f7ed4c0b3bd35a24ddbdc859e5171b019bae9ef6c9fb86c68.png" title=" Usuario clicks on Guardar Auditoria 1" width="1366"/>
+                <img src="9092cf751efed79f7ed4c0b3bd35a24ddbdc859e5171b019bae9ef6c9fb86c68.png" title=" Usuario is crear auditoria01 (completed)" width="1366"/>
+                <img src="c76d399aa378e5b5634454f5f2dacf09823fd34d50bd5da94145e372b4249524.png" title=" Usuario is gestionar auditoria02" width="1366"/>
+                <img src="c76d399aa378e5b5634454f5f2dacf09823fd34d50bd5da94145e372b4249524.png" title=" Usuario enters 'Automotion' into Descripci&oacute;n del conteo" width="1366"/>
+                <img src="202181bc7e635e76daa7e355fab16aadee60ab20b401b89cd0f8b3a3df13c0b4.png" title=" Usuario enters 'QA' into Observaci&oacute;n del conteo" width="1366"/>
+                <img src="2c66418d69ce5a98664be6825b10b0e9f25c776ea56bb1884fc5210c485bdd0a.png" title=" Usuario enters 'Conteo inicial' into Tipo del conteo" width="1366"/>
+                <img src="c4695b46b302c8e750ddfc154a1383b40f2f1b60d919572e9beac045d7e0c75e.png" title=" Usuario clicks on List Tipo del conteo" width="1366"/>
+                <img src="5ead1b100812b8f335e24e675f415722f07c6bc694a3b2674254810311cd25b6.png" title=" Usuario clicks on Guardar -  conteo" width="1366"/>
+                <img src="b5bdeea91e2bfd71bc2dff065b1628b255eed443f6806f278eb6bf61a99320ef.png" title=" Usuario clicks on Comparar Conteo -  conteo" width="1366"/>
+                <img src="45eb85acc4f2e33823cb2071e9e85fdd80e64c972962117904291c9913afd508.png" title=" Usuario clicks on Gestionar Conteo -  conteo" width="1366"/>
+                <img src="7ce7cb0527ea9aaad3593e949bc6f09fedcb85e634d42b666d4aa963d3ff5d40.png" title=" Usuario enters '12' into Ingresar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1366"/>
+                <img src="8f8cafc3b6785795bff2e0532d5c3f610ce2c9df662b2f84e91aed9ea03e9c1a.png" title=" Usuario clicks on Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1366"/>
+                <img src="122c6c419c677fbf08d6d85a3a360d904fa7d8c5e854d90c885c955655b30c1f.png" title=" Usuario enters 'Automotion2' into Descripci&oacute;n del conteo" width="1366"/>
+                <img src="512d5643b075c1f2ea5134a4ba15dec43225be70f3a1295d6a6cb513832a567a.png" title=" Usuario enters 'QA2' into Observaci&oacute;n del conteo" width="1366"/>
+                <img src="c0443fa593262eceea8a6109d0ac030ad14500959849c665ed3c42a633577a12.png" title=" Usuario enters 'Conteo inicial' into Tipo del conteo" width="1366"/>
+                <img src="477ccc9d883b87b63662cd433cc4b1bf45963325219dc3b1b04f1f23407c45ad.png" title=" Usuario clicks on List Tipo del conteo" width="1366"/>
+                <img src="c233296fc8a0918269ee8ec70bc01e775e95d2938b075d6641aaf0c3c9b22b3c.png" title=" Usuario clicks on Guardar -  conteo" width="1366"/>
+                <img src="00dd1c02a9148c5357eaa71ffba06e4d5765942122a31c96ea8b8c8218473ae8.png" title=" Usuario clicks on Gestionar Conteo -  conteo" width="1366"/>
+                <img src="7ce7cb0527ea9aaad3593e949bc6f09fedcb85e634d42b666d4aa963d3ff5d40.png" title=" Usuario enters '12' into Ingresar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1366"/>
+                <img src="de3892ddf250acec0062aba31c92bcc603087d530b74d2dbc4a568f5cac9bb74.png" title=" Usuario clicks on Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1366"/>
+                <img src="93e51f42fb714574b6731db6b789859f401ea99e24560ad12a56c63feffee6b3.png" title=" Usuario clicks on Comparar Conteo -  conteo" width="1366"/>
+                <img src="c5b430e27ebbb44ab3acc5720760d241a9bcefdaefe248b9dd36a9dbf5da021a.png" title=" Usuario clicks on Input Conteo a comparar" width="1366"/>
+                <img src="50477303ffe044dc618a8caf77ce77db15e4fb0208e989166d99413c1b3aaa37.png" title=" Usuario clicks on Comparar conteos" width="1366"/>
+                <img src="136253178e5f6e428cdba83321c1fbece8f5edf877a73cc203e851fe6fd5bd04.png" title=" Usuario clicks on Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1366"/>
+                <img src="b884d4233a858d7a0ca3b4fa3b0a6ebf1807dba5b765e7e7616e97d58011dfa4.png" title=" Usuario clicks on Cerrar la venta de comparaci&oacute;n de conteos" width="1366"/>
+                <img src="9eb6b40c8573a890c8c33b1827f1ae1cbb22d5b6532b994c2f2c74731d513fb5.png" title=" Usuario clicks on Cambiar Etapa de la Auditoria" width="1366"/>
+                <img src="7d186cca97cc579a62e19bf135e71e5492d897f6e3e28044c87483b8b86e5ffa.png" title=" Usuario clicks on Lista Cambiar Etapa de la Auditoria" width="1366"/>
+                <img src="70d5eae3b90b7666fcd3c7fed0a4484bc70530d75ee5bb7f8168a78e98c536ad.png" title=" Usuario clicks on Continuar con el cambio de Etapa" width="1366"/>
+                <img src="79bff3a8c01ecbe48a3b7cee278ad5935b001cc1ef8c2c5280ecf93481e3e20f.png" title=" Usuario clicks on Cambiar Etapa de la Auditoria" width="1366"/>
+                <img src="20ac9e0ac18b5f92ca30871bce44525af3a0f31780091252e9ac70f9ac077f4e.png" title=" Usuario clicks on Lista Cambiar Etapa de la Auditoria" width="1366"/>
+                <img src="4e08eb9f4095252b8175dfdf584c3f5e75ec786848e26bce71558791ef73248f.png" title=" Usuario clicks on Conteo a finalizar" width="1366"/>
+                <img src="917b515219be711548ae5c8d6462605329d80a80f1897ccb297b2687ecbc05a4.png" title=" Usuario clicks on Lista Conteo a finalizar" width="1366"/>
+                <img src="83887facdddea3e5a17f670fc44059c2df00c8bd1c4df7e46a8e2edaa72bcf75.png" title=" Usuario clicks on Finalizar Auditoria" width="1366"/>
+                <img src="d76367547f5ff33d94f1e00ae308ad99b2cd7436643cfcd52c38523f3d5f3d36.png" title=" Usuario clicks on Continuar con el cambio de Etapa" width="1366"/>
+                <img src="6eb307483e8b1da9eeeaba19dd1dfaefe66292684b1443bd066688be6377383f.png" title=" Usuario clicks on Cerrar la ventana de la auditoria" width="1366"/>
+                <img src="6eb307483e8b1da9eeeaba19dd1dfaefe66292684b1443bd066688be6377383f.png" title=" Usuario is gestionar auditoria02 (completed)" width="1366"/>
+                <img src="6eb307483e8b1da9eeeaba19dd1dfaefe66292684b1443bd066688be6377383f.png" title=" Usuario ts proceso auditoria (completed)" width="1366"/>
+                <img src="459c63839db38d24099da12f79aa57fba1c22020343ca0d16eea2f9b22811e75.png" title=" Cuando Crea la orden de de auditoria (completed)" width="1366"/>
+                <img src="459c63839db38d24099da12f79aa57fba1c22020343ca0d16eea2f9b22811e75.png" title=" Entonces verifica que se cumplio la orden de auditoria correctamente: <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.0.90</span>
+</div>
+</body>
+</html>
