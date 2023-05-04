@@ -1,7 +1,7 @@
 package co.com.infotrack.interations;
 
 import co.com.infotrack.userinterfaces.ObProcesoAuditoria;
-import co.com.infotrack.utils.CargarArchivos;
+import co.com.infotrack.utils.UsCargarArchivos;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -23,7 +23,7 @@ public class IsCrearAuditoria01 implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         try {
-            CargarArchivos.CrearAuditoria();
+            UsCargarArchivos.CrearAuditoria();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -33,19 +33,19 @@ public class IsCrearAuditoria01 implements Interaction {
                         WebElementQuestion.the(ObProcesoAuditoria.Bodega),
                         WebElementStateMatchers.isEnabled()
                 ).forNoLongerThan(10).seconds(),
-                Enter.theValue(CargarArchivos.properties.getProperty("Bodega"))
+                Enter.theValue(UsCargarArchivos.properties.getProperty("Bodega"))
                         .into(ObProcesoAuditoria.Bodega),
                 Click.on(ObProcesoAuditoria.ListBodega),
-                Enter.theValue(CargarArchivos.properties.getProperty("TipoDocumento"))
+                Enter.theValue(UsCargarArchivos.properties.getProperty("TipoDocumento"))
                         .into(ObProcesoAuditoria.TipoDocumento),
                 Click.on(ObProcesoAuditoria.ListTipoDocumento),
-                Enter.theValue(CargarArchivos.properties.getProperty("Division"))
+                Enter.theValue(UsCargarArchivos.properties.getProperty("Division"))
                         .into(ObProcesoAuditoria.Division),
                 Click.on(ObProcesoAuditoria.ListDivision),
-                Enter.theValue(CargarArchivos.properties.getProperty("Familia"))
+                Enter.theValue(UsCargarArchivos.properties.getProperty("Familia"))
                         .into(ObProcesoAuditoria.Familia),
                 Click.on(ObProcesoAuditoria.ListaFamilia),
-                Enter.theValue(CargarArchivos.properties.getProperty("Item"))
+                Enter.theValue(UsCargarArchivos.properties.getProperty("Item"))
                         .into(ObProcesoAuditoria.Item),
                 Click.on(ObProcesoAuditoria.ListItem),
                 Click.on(ObProcesoAuditoria.Guardar)

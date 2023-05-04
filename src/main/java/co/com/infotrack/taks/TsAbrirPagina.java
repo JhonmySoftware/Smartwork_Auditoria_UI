@@ -2,7 +2,7 @@ package co.com.infotrack.taks;
 
 import co.com.infotrack.userinterfaces.ObAbrirPagina;
 import co.com.infotrack.userinterfaces.ObLogin;
-import co.com.infotrack.utils.CargarArchivos;
+import co.com.infotrack.utils.UsCargarArchivos;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -22,7 +22,7 @@ public class TsAbrirPagina implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         try {
-            CargarArchivos.datoslogin();
+            UsCargarArchivos.datoslogin();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -35,8 +35,8 @@ public class TsAbrirPagina implements Task {
         }
         // Login
         actor.attemptsTo(
-                Enter.theValue(CargarArchivos.properties.getProperty("Username")).into(ObLogin.Usuario),
-                Enter.theValue(CargarArchivos.properties.getProperty("Password")).into(ObLogin.contrasenia),
+                Enter.theValue(UsCargarArchivos.properties.getProperty("Username")).into(ObLogin.Usuario),
+                Enter.theValue(UsCargarArchivos.properties.getProperty("Password")).into(ObLogin.contrasenia),
                 Click.on(ObLogin.InisiarSession)
         );
     }

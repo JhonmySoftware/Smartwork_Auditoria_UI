@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Proceso Auditoria - Smartstock" skipped="0" tests="1" time="71.89" timestamp="2023-05-04 09:55:24"><testcase name="Proceso Auditoria - Smartstock"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Proceso Auditoria - Smartstock" skipped="0" tests="1" time="59.57" timestamp="2023-05-04 04:44:11"><testcase name="Proceso Auditoria - Smartstock"><error message="Index: 2, Size: 0" type="java.lang.IndexOutOfBoundsException">Index: 2, Size: 0</error><system-err>Index: 2, Size: 0&#13;
+co.com.infotrack.interations.IsGestionarAuditoria02.performAs(IsGestionarAuditoria02.java:107)&#13;
+co.com.infotrack.taks.TsProcesoAuditoria.performAs(TsProcesoAuditoria.java:51)&#13;
+co.com.infotrack.definitions.MyDefinitions.creaLaOrdenDeDeAuditoria(MyDefinitions.java:30)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>

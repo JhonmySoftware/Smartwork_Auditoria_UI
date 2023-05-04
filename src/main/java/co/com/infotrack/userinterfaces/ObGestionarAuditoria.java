@@ -40,6 +40,9 @@ public class ObGestionarAuditoria extends PageObject {
     public static final Target IngresarCatidadConteo = Target.the("Ingresar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
             .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Cantidad'])[1]/following::input[1]"));
 
+    public static final Target SiguientePagina = Target.the("Siguiente pagina para ver los demas productos de la auditoria")
+            .located(By.xpath("//span[contains(text(),'chevron_right')]"));
+
     public static final Target AgregarCatidadConteo = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
             .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[2]/following::span[1]/.."));
 
