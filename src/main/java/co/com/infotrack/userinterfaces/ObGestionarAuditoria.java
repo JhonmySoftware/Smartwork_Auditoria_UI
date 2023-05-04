@@ -92,6 +92,10 @@ public class ObGestionarAuditoria extends PageObject {
             .located(By
                     .xpath("//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit']"));
 
+    // Estado Auditoria
+    public static final Target VrEstadoAuditoria = Target.the("Verificar el estado de la Auditoria")
+            .located(By.xpath("//td[@value='Finalizado']"));
+
 
 
 

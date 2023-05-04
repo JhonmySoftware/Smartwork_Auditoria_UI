@@ -1,13 +1,16 @@
 package co.com.infotrack.definitions;
 
+import co.com.infotrack.questions.VrEstadoAuditoria;
 import co.com.infotrack.taks.TsAbrirPagina;
 import co.com.infotrack.taks.TsProcesoAuditoria;
 import cucumber.api.java.Before;
 import cucumber.api.java.ast.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import org.hamcrest.Matchers;
 
 public class MyDefinitions {
 
@@ -30,7 +33,7 @@ public class MyDefinitions {
 
     @Entonces("^verifica que se cumplio la orden de auditoria correctamente$")
     public void verificaQueSeCumplioLaOrdenDeAuditoriaCorrectamente() {
-        //OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerificarDiferenciaConteos.one(), Matchers.equalTo("0")));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VrEstadoAuditoria.one(), Matchers.equalTo("Finalizado")));
 
     }
 

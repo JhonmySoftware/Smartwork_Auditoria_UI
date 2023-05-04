@@ -5,15 +5,15 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-public class VrDiferenciaConteos implements Question {
+public class VrEstadoAuditoria implements Question {
 
 
-    public static VrDiferenciaConteos one() {
-        return new VrDiferenciaConteos();
+    public static VrEstadoAuditoria one() {
+        return new VrEstadoAuditoria();
     }
 
     @Override
     public Object answeredBy(Actor actor) {
-        return Text.of(ObGestionarAuditoria.DiferenciaConteos).viewedBy(actor).asString();
+        return Text.of(ObGestionarAuditoria.VrEstadoAuditoria).viewedBy(actor).asString();
     }
 }

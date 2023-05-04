@@ -15,6 +15,7 @@ import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.waits.Wait;
 import org.openqa.selenium.WebDriver;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.*;
 
@@ -48,10 +49,17 @@ public class IsGestionarAuditoria02 implements Interaction {
                 Enter.theValue(CargarArchivos.properties.getProperty("TipoConteo"))
                         .into(ObGestionarAuditoria.TipoConteo),
                 Click.on(ObGestionarAuditoria.ListTipoConteo),
-                Click.on(ObGestionarAuditoria.Guardar2),
-                Click.on(ObGestionarAuditoria.CompararConteo)
+                Click.on(ObGestionarAuditoria.Guardar2)
         );
 
+        // Comparar el conteo
+        try {
+            actor.attemptsTo(Click.on(ObGestionarAuditoria.CompararConteo));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Los parámetros configurados en la auditoria " +
+                    "no permitieron encontrar movimientos que permitan calcular el stock disponible o no se " +
+                    "encuentra diferencias en el inventario.: Validar Familia Inventario ");
+        }
 
         // Obtener el manejador de ventanas
         WebDriver driver = getDriver();
@@ -229,6 +237,10 @@ public class IsGestionarAuditoria02 implements Interaction {
                 ).forNoLongerThan(10).seconds(),
                 Click.on(ObGestionarAuditoria.CambiarEtapa),
                 Click.on(ObGestionarAuditoria.CambiarEtapaList),
+                Wait.until(
+                        WebElementQuestion.the(ObGestionarAuditoria.ConteoFinalizar),
+                        WebElementStateMatchers.isEnabled()
+                ).forNoLongerThan(10).seconds(),
                 Click.on(ObGestionarAuditoria.ConteoFinalizar),
                 Wait.until(
                         WebElementQuestion.the(ObGestionarAuditoria.ConteoFinalizarList),
@@ -252,6 +264,12 @@ public class IsGestionarAuditoria02 implements Interaction {
                 ).forNoLongerThan(10).seconds(),
                 Click.on(ObGestionarAuditoria.CrVentanaAuditoria)
         );
+
+        // Esperar para ver el estado de la auditoria
+        actor.attemptsTo(Wait.until(
+                WebElementQuestion.the(ObGestionarAuditoria.VrEstadoAuditoria),
+                WebElementStateMatchers.isVisible()
+        ).forNoLongerThan(10).seconds());
 
 
     }
