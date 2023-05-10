@@ -43,11 +43,45 @@ public class ObGestionarAuditoria extends PageObject {
     public static final Target SiguientePagina = Target.the("Siguiente pagina para ver los demas productos de la auditoria")
             .located(By.xpath("//span[contains(text(),'chevron_right')]"));
 
+    public static final Target SiguientePaginaInactivo = Target.the("Siguiente pagina para ver los demas productos de la auditoria - Elemento Inactivo")
+            .located(By.xpath("//span[@title='Página siguiente']//button[@disabled]"));
+
+
+
+    // ************************************************* Lista Agregar Cantidades
     public static final Target AgregarCatidadConteo = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
             .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[2]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo2 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[3]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo3 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[4]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo4 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[5]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo5 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[6]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo6 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[7]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo7 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[8]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo8 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[9]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo9 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[10]/following::span[1]/.."));
+    public static final Target AgregarCatidadConteo10 = Target.the("Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo")
+            .located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Agregar'])[11]/following::span[1]/.."));
+
+    // **************************************************** Fin
+
+    public static final Target ScrolTest = Target.the("Scroll para agregar cantidades tipo serial")
+            .located(By.xpath("//input[@placeholder='Buscar']"));
+
+
 
 
     // Gestionar Segundo conteo
+
+    public static final Target TextoAuditoria = Target.the("Gestionar Conteo -  conteo")
+            .located(By.xpath("//table/tbody/tr[1]/td[1][@value='C Numero 2']"));
     public static final Target GestionarConteo2 = Target.the("Gestionar Conteo -  conteo")
             .located(By.xpath("//tbody/tr[2]/td[3]/div[1]/div[1]/button[1]/span[1]/*[1]"));
 

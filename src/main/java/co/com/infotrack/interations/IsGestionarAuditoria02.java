@@ -1,5 +1,6 @@
 package co.com.infotrack.interations;
 
+import co.com.infotrack.interations.Seriales.CompararConteos;
 import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
 import co.com.infotrack.utils.UsCargarArchivos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
@@ -52,7 +53,7 @@ public class IsGestionarAuditoria02 implements Interaction {
                 Click.on(ObGestionarAuditoria.Guardar2)
         );
 
-        String[] listadoItems1 = {"FIFO", "FEFO", "LOTE"};
+        String[] listadoItems1 = {"FIFO", "FEFO", "LOTE","Uvas","Polipropileno","Polietileno","Masterbatch"};
 
         if (Arrays.asList(listadoItems1).contains(UsCargarArchivos.properties.getProperty("Item"))) {
             // código a ejecutar si el valor de "Item" está en la lista de "listadoItems"
@@ -184,14 +185,7 @@ public class IsGestionarAuditoria02 implements Interaction {
             driver.switchTo().window(secondWindowHandle2);
 
             // Comparar el conteo uno con el conteo dos
-            actor.attemptsTo(Click.on(ObGestionarAuditoria.CompararConteo),
-                    Click.on(ObGestionarAuditoria.ConteoComparar),
-                    Wait.until(
-                            WebElementQuestion.the(ObGestionarAuditoria.ConteoCompararList),
-                            WebElementStateMatchers.isEnabled()
-                    ).forNoLongerThan(10).seconds(),
-                    Click.on(ObGestionarAuditoria.ConteoCompararList),
-                    Click.on(ObGestionarAuditoria.CompararConteosfin));
+            actor.attemptsTo(CompararConteos.one());
 
             // Cambiar de ventana y validar la cantidad de productos - Gestión de Conteos
             UsObtenerVentanasNavegador obtenerVentanas = new UsObtenerVentanasNavegador(driver, 1);
@@ -253,13 +247,18 @@ public class IsGestionarAuditoria02 implements Interaction {
                         WebElementQuestion.the(ObGestionarAuditoria.ConteoFinalizarList),
                         WebElementStateMatchers.isEnabled()
                 ).forNoLongerThan(10).seconds(),
-                Click.on(ObGestionarAuditoria.ConteoFinalizarList),
-                Click.on(ObGestionarAuditoria.FinalizarAuditoria),
-                Click.on(ObGestionarAuditoria.ContinuarCEtapa)
-        );
+                Click.on(ObGestionarAuditoria.ConteoFinalizarList));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        actor.attemptsTo(Click.on(ObGestionarAuditoria.FinalizarAuditoria),
+                Click.on(ObGestionarAuditoria.ContinuarCEtapa));
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -267,8 +266,8 @@ public class IsGestionarAuditoria02 implements Interaction {
         // Cerrar Ventana de la Auditoria
         actor.attemptsTo(Wait.until(
                         WebElementQuestion.the(ObGestionarAuditoria.CrVentanaAuditoria),
-                        WebElementStateMatchers.isEnabled()
-                ).forNoLongerThan(10).seconds(),
+                        WebElementStateMatchers.isVisible()
+                ).forNoLongerThan(20).seconds(),
                 Click.on(ObGestionarAuditoria.CrVentanaAuditoria)
         );
 
@@ -276,7 +275,7 @@ public class IsGestionarAuditoria02 implements Interaction {
         actor.attemptsTo(Wait.until(
                 WebElementQuestion.the(ObGestionarAuditoria.VrEstadoAuditoria),
                 WebElementStateMatchers.isVisible()
-        ).forNoLongerThan(10).seconds());
+        ).forNoLongerThan(20).seconds());
 
 
     }
