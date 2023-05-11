@@ -100,6 +100,7 @@ public class ObGestionarAuditoria extends PageObject {
     public static final Target DiferenciaConteos = Target.the("Obtener la cantidad de diferencia en el conteo")
             .located(By.xpath("//tbody//td[9]"));
 
+
     // Cerrar ventana de Comparar conteos
     public static final Target CerrarVentanaConteos = Target.the("Cerrar la venta de comparación de conteos")
             .located(By.xpath("(//button[@type='button'])[60]"));

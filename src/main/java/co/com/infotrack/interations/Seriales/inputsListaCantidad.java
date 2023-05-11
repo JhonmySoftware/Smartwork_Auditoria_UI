@@ -1,8 +1,10 @@
 package co.com.infotrack.interations.Seriales;
 
+import co.com.infotrack.questions.VrConteoSeriales;
 import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
 import co.com.infotrack.utils.UsCargarArchivos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -11,13 +13,13 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.questions.Text;
+import net.serenitybdd.screenplay.questions.TextContent;
 import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.Wait;
-import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.NoSuchWindowException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -144,10 +146,13 @@ public class inputsListaCantidad implements Interaction {
         }
 
         // Obligo a seleccionar el segundo conteo.
-        if (ObGestionarAuditoria.TextoAuditoria.resolveFor(actor).isEnabled()) { // Se utiliza trim() para eliminar espacios adicionales
-            actor.attemptsTo(Click.on(ObGestionarAuditoria.GestionarConteo)); // Se selecciona el segundo conteo
-        }else {
-            actor.attemptsTo(Click.on(ObGestionarAuditoria.GestionarConteo2)); // Se selecciona el primer conteo
+        try {
+            if (ObGestionarAuditoria.TextoAuditoria.resolveFor(actor).isVisible()) {
+                actor.attemptsTo(Click.on(ObGestionarAuditoria.GestionarConteo));
+            } else {
+                actor.attemptsTo(Click.on(ObGestionarAuditoria.GestionarConteo2));
+            }
+        } catch (ElementNotVisibleException | ElementClickInterceptedException e) {
         }
 
 
@@ -221,13 +226,16 @@ public class inputsListaCantidad implements Interaction {
             throw new RuntimeException(e);
         }
 
-        UsObtenerVentanasNavegador ventana01 = new UsObtenerVentanasNavegador(getDriver(),0);
+        UsObtenerVentanasNavegador ventana01 = new UsObtenerVentanasNavegador(getDriver(), 0);
 
         // Comparar el conteo
-        actor.attemptsTo(CompararConteos.one());
-
-        UsObtenerVentanasNavegador Windowss2 = new UsObtenerVentanasNavegador(getDriver(),1);
-
+        actor.attemptsTo(VrConteoSeriales.one());
+        getDriver().close();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
 

@@ -132,7 +132,7 @@
             <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-05-2023 16:37</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-05-2023 14:53</span>
     <br style="clear:left"/>
 </div>
 
@@ -179,9 +179,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Proceso Auditoria - Smartstock
+                                <span class="error-color">Proceso Auditoria - Smartstock
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -204,7 +204,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                    <span class="error-message error-message-title">Element click intercepted exception: element click intercepted: Element (span class='material-icons MuiIcon-root-972' aria-hidden='true')...(/span) is not clickable at point (1823, 798). Other element would receive the click: (span class='' aria-describedby='mui-72332')...(/span)</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -220,20 +220,13 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                    <h4>org.openqa.selenium.ElementClickInterceptedException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>co.com.infotrack.interations.IsGestionarAuditoria02.performAs(IsGestionarAuditoria02.java:228)<br />co.com.infotrack.taks.TsProcesoAuditoria.performAs(TsProcesoAuditoria.java:51)<br />co.com.infotrack.definitions.MyDefinitions.creaLaOrdenDeDeAuditoria(MyDefinitions.java:30)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>co.com.infotrack.questions.VrConteoSeriales.performAs(VrConteoSeriales.java:61)<br />co.com.infotrack.interations.Seriales.inputsListaCantidad.performAs(inputsListaCantidad.java:232)<br />co.com.infotrack.interations.IsTipoSeriales03.performAs(IsTipoSeriales03.java:36)<br />co.com.infotrack.interations.IsGestionarAuditoria02.performAs(IsGestionarAuditoria02.java:224)<br />co.com.infotrack.taks.TsProcesoAuditoria.performAs(TsProcesoAuditoria.java:51)<br />co.com.infotrack.definitions.MyDefinitions.creaLaOrdenDeDeAuditoria(MyDefinitions.java:30)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Cambiar Etapa'])[1]/following::input[1]/.. to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
-                        <pre>co.com.infotrack.interations.IsGestionarAuditoria02.performAs(IsGestionarAuditoria02.java :228)<br />co.com.infotrack.taks.TsProcesoAuditoria.performAs(TsProcesoAuditoria.java :51)<br />co.com.infotrack.definitions.MyDefinitions.creaLaOrdenDeDeAuditoria(MyDefinitions.java :30)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
@@ -241,131 +234,132 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource8505902693484753561.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource87604309139974691.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="4d2c299da81028fdfb09b341724bbfb2dce1e95ddd21745315133daa7a134fb5.png" title=" Dado que existe una una solicitud de auditoria" width="1366"/>
-                <img src="4d2c299da81028fdfb09b341724bbfb2dce1e95ddd21745315133daa7a134fb5.png" title=" Usuario ts abrir pagina" width="1366"/>
-                <img src="4d2c299da81028fdfb09b341724bbfb2dce1e95ddd21745315133daa7a134fb5.png" title=" Usuario opens the Ob abrir pagina" width="1366"/>
-                <img src="8aeba8b01b1a8a268471c6d6889a53fc7ce548170a190330343c8a9792418ec8.png" title=" Usuario enters 'jhonfquinonesa' into Input para ingresar el usuario" width="1366"/>
-                <img src="eacd48bee5e658b15c27500c29e410ee50a33f8d8a9b3e15461c1e1fbfc14453.png" title=" Usuario enters 'Puli0010***' into Input para ingresar la contrase&ntilde;a" width="1366"/>
-                <img src="c1f29ae312759ddee5dca35efb22782573e64c71f49eee01f875f6ae4ef200e2.png" title=" Usuario clicks on button para dar ingreso al sitio" width="1366"/>
-                <img src="c1f29ae312759ddee5dca35efb22782573e64c71f49eee01f875f6ae4ef200e2.png" title=" Usuario ts abrir pagina (completed)" width="1366"/>
-                <img src="fa4e2a9a7eb1c5af4e82338b3c6bcf0b72659a923eaf64d8cc79ff1d124d81fa.png" title=" Dado que existe una una solicitud de auditoria (completed)" width="1366"/>
-                <img src="672bfb76026bac1adaba1ceafc993a552fcba39ad64cd360d72d6cc0f00df161.png" title=" Cuando Crea la orden de de auditoria" width="1366"/>
-                <img src="672bfb76026bac1adaba1ceafc993a552fcba39ad64cd360d72d6cc0f00df161.png" title=" Usuario ts proceso auditoria" width="1366"/>
-                <img src="672bfb76026bac1adaba1ceafc993a552fcba39ad64cd360d72d6cc0f00df161.png" title=" Usuario clicks on Bot&oacute;n de Proceso de Inventario" width="1366"/>
-                <img src="6e6aa81b726682a4be87ff32490436a4f22ca9c0420f056cf776db02dfc1c7ef.png" title=" Usuario clicks on Bot&oacute;n de Auditoria" width="1366"/>
-                <img src="fff6ef8b3d47b9908631ee4e6c36923c896a0eb2a38622d2445c33ce6b9494eb.png" title=" Usuario clicks on Bot&oacute;n de + para agregar auditoria" width="1366"/>
-                <img src="f1ec01018ffca256aba06e3febcbb20a6f667ff0865f5991e3357c163d5aa8c6.png" title=" Usuario is crear auditoria01" width="1366"/>
-                <img src="f1ec01018ffca256aba06e3febcbb20a6f667ff0865f5991e3357c163d5aa8c6.png" title=" Usuario enters 'Bodega Principal' into input Seleccionar la bodega" width="1366"/>
-                <img src="2b4baf4cf58c481019757e744b409e2cd4f03e2cac845e35941fdbd81c88a496.png" title=" Usuario clicks on Lista Seleccionar la bodega" width="1366"/>
-                <img src="0a7bc403351a95254184559fe6aed479e06e36988cfdec5f3f1fbb4b1cec2082.png" title=" Usuario enters 'Auditoria' into Input de Tipo de documento" width="1366"/>
-                <img src="6b1053abcd8931dc55ecba6d267f02bb10679abb0b015c07541c9097400be24b.png" title=" Usuario clicks on input Lista Bot&oacute;n de Tipo de documento" width="1366"/>
-                <img src="a499330235faa417a9e064ae94b0552cc6e24f7b91a748a9f0ebbcb4acc4c6ea.png" title=" Usuario enters 'Divisi&oacute;n' into Input Divisi&oacute;n" width="1366"/>
-                <img src="1863950e4516b0bc9039d525bef55c0ff71926995d72de735965a02b5957513f.png" title=" Usuario clicks on Lista Input Divisi&oacute;n" width="1366"/>
-                <img src="93491dfb364fed132bc83e67b17735b3b9cef47471eca46635f032a899bd8221.png" title=" Usuario enters 'Familia Ejemplo' into input Familia" width="1366"/>
-                <img src="579118f4d0ae7c7f5f5ee6c1e657a211a9946c706f55ad262fc8d7b7df14a127.png" title=" Usuario clicks on Lista Input Familia" width="1366"/>
-                <img src="62ab2cf8fda260e7ef70985464fc1fa135b3fe94ea47c3685b552b770d896cda.png" title=" Usuario enters 'Serial' into &iacute;tem" width="1366"/>
-                <img src="106e993fbbc71db9b678c06cceb39708093e68c6d80c74cfe7e8b91386c9a233.png" title=" Usuario clicks on Lista &iacute;tem" width="1366"/>
-                <img src="a8646c3babe3236f43feab618987e6c4e5f6174869de2407efa6c3e08c2fd694.png" title=" Usuario clicks on Guardar Auditoria 1" width="1366"/>
-                <img src="a8646c3babe3236f43feab618987e6c4e5f6174869de2407efa6c3e08c2fd694.png" title=" Usuario is crear auditoria01 (completed)" width="1366"/>
-                <img src="4aac955b71906c7cf7f80b95dc9abff2393945fc324e021c6a369a70e62c04f2.png" title=" Usuario is gestionar auditoria02" width="1366"/>
-                <img src="4aac955b71906c7cf7f80b95dc9abff2393945fc324e021c6a369a70e62c04f2.png" title=" Usuario enters 'Conteo' into Descripci&oacute;n del conteo" width="1366"/>
-                <img src="29339bd4850549440e8fd22c3f78dd8cdd16d185345a72a4f7375c6577c558e8.png" title=" Usuario enters 'QA' into Observaci&oacute;n del conteo" width="1366"/>
-                <img src="504ac4e37cf1cc10e213018fb953814b84da1f2dfd8ba88dbd91f4d2fe61775b.png" title=" Usuario enters 'Conteo inicial' into Tipo del conteo" width="1366"/>
-                <img src="2988e70e3c05709ada251feba02c2aa2666806547059b40800a31b026db2d285.png" title=" Usuario clicks on List Tipo del conteo" width="1366"/>
-                <img src="6fce1809d122768d7ca688f9b26ae4e4e6fdd1ef862345bcd36218aceb85354c.png" title=" Usuario clicks on Guardar -  conteo" width="1366"/>
-                <img src="3c3ec5f7c07c15d78c932ea75e07e909f600daac64cfacae3714b29d5d2e62f3.png" title=" Usuario is tipo seriales03" width="1366"/>
-                <img src="3c3ec5f7c07c15d78c932ea75e07e909f600daac64cfacae3714b29d5d2e62f3.png" title=" Usuario inputs lista cantidad" width="1366"/>
-                <img src="3c3ec5f7c07c15d78c932ea75e07e909f600daac64cfacae3714b29d5d2e62f3.png" title=" Usuario clicks on Gestionar Conteo -  conteo" width="1366"/>
-                <img src="4698f5154a498b407af6804bae216ccd576ef731d379b194f28ace9138a85b05.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1366"/>
-                <img src="2c1dffb76da065bc72269a8de93c75bd00d506b3cead8854d3fcb4312b0a89bf.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1366"/>
-                <img src="a56f9f158e129cb35821b12678853d09c17d4571f76d6a8a019649b905dc4845.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1366"/>
-                <img src="62b7667b289826243e181a041d204611b600e0d68c7c4d71d2bdcb276317b5bf.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1366"/>
-                <img src="0ad6bc5b5001373ef1a7d0010d29b65a5f615c31dc27a15de25ea88b7c625268.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1366"/>
-                <img src="a5c741af20a2eb6185aa37d5b035a788c9d42bc878ad9496ce6b0ff44ab92fdd.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1366"/>
-                <img src="7e231270f44a606dc094e091f8adc16c701c7479872525fb16e9dc6414ea3ec6.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1366"/>
-                <img src="bd098adae9fdac2ea0f9a0d20d0e677042817e7e1bb4403ad004976bcff2c9a4.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1366"/>
-                <img src="09099597f134f22ff9753915715e34e358a910352f2819d8b22ddbbd274ce56c.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1366"/>
-                <img src="6a185e13f5efc8a4e661817663eeab27fec0dc2d6fd8fb9cec880596e1416b07.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1366"/>
-                <img src="524dfe86057f21a0b037ab2ce36c6d9df88a3ac0a4cfd8c29254d6aea8b2a924.png" title=" Usuario btn agregar list" width="1366"/>
-                <img src="cdc1b9f08dea9c04870e8040308eec099b18c0303d92274f45003b2fad0740b3.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1366"/>
-                <img src="3263e042b5cb812dbf684d818781670e0f71389b4b202c6336c51d01b88fe5cd.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1366"/>
-                <img src="92936394e9e1b045b47e6ca20888e06a7dd0bc4bcc2c883ee65d513d139210f6.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1366"/>
-                <img src="48611a200da7417691333359d27d1d6738906dc63d3041d1c4d3945b9baba73f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1366"/>
-                <img src="35fe6172e98a3f0bdcc43e6ca26571f73542a2f8ff2532e05fee2a14fad458f7.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1366"/>
-                <img src="13ddcf48ad73c877062d718f649aa1667ac1ba94e893cf316cc3b30091c4133e.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1366"/>
-                <img src="bc7fa70f7bbad3cab46e4a9808a6e43327379e57c76fa79ed2784a7bb36e53f7.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1366"/>
-                <img src="2682e05deb0d2d5cfe3704c2ca6f1f7f7109d3a7e900e2cfb3df341075923c22.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1366"/>
-                <img src="b7cc7d7afa3c7a2d87781cd5682d557ea7d2d9b1e966c44ea7e0fb426c51102f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1366"/>
-                <img src="cb972cb1c3fb4f46456f699077ced48137c5bf87e28e0553ae0f7d4d3f889cff.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1366"/>
-                <img src="8df086726ac72952e057ca0d4e80333b26998295a66a9399c49f5f52dbd9c314.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1366"/>
-                <img src="d2d40491e204410a36ca417aba172512c19c239ec3b9958807bd528542d1e043.png" title=" Usuario btn agregar list" width="1366"/>
-                <img src="e810883f92acc57d03c93340b44fefa5bbfc9640c2453c87462f555ddd82edc6.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1366"/>
-                <img src="c3ed2ab3223ae56018bf73adad74102330bbbd0f2a5fbb2fe7fdaf5db4bac8ba.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1366"/>
-                <img src="bd1eac63fb1338673fe127a8154808ffe5dd416d4b163ab8872c1baa981be16a.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1366"/>
-                <img src="bb7a9f0ececcbbc61395b2eb032a89f818b8429a7a37f528888267fa52ae2075.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1366"/>
-                <img src="fc8d9acfe701c8d8b30e41dea874481d936b7e071641b66856bddae0b0ac562d.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1366"/>
-                <img src="ea3c6dc81ea36f3d55a72fc827fad0981c2a46074fae3b87f4a6e00a4b1dc354.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1366"/>
-                <img src="b4e6c13f3eee09b82537650e29dd747745f76b352855411c6bc56ea817b44cb4.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1366"/>
-                <img src="da5f8c8e8b90e1bd35ca283200bfb599195dd01ccd6507ce351350d204a0f052.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1366"/>
-                <img src="e38475e8baf06abf4cdde985fdaf4e11a068c7450a81612bd050bcbed71557a4.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1366"/>
-                <img src="600242e637613b76ecd0588d566d94e47af0dcb1c0c6fd321a711d32dd15f4ea.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1366"/>
-                <img src="d96e921a67b95ae837cb10f36d6bc84694dddc6d86888b4b1ba9d03d557e107c.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1366"/>
-                <img src="7bd4bbce5588c28e8b387905115bb3c697a2285cf5b0e719a2de3f663efacc5f.png" title=" Usuario btn agregar list" width="1366"/>
-                <img src="03705c729b0bea385f26d7dff2b9a8841d1a6dfdc0bc8150644dd0863cf903ae.png" title=" Usuario enters 'C Numero 2' into Descripci&oacute;n del conteo" width="1366"/>
-                <img src="58b6fbbda0305752d6e7a8898d6f4b6d110fb2f904d294e692d269ddb3a1ce3a.png" title=" Usuario enters 'QA2' into Observaci&oacute;n del conteo" width="1366"/>
-                <img src="abfc4364644fd1da58bb4576bd725a1032a9d1baa627b4b127936a794c3a67f2.png" title=" Usuario enters 'Conteo inicial' into Tipo del conteo" width="1366"/>
-                <img src="ca12fe9c357f1230f8a30679b940e3218ef0176b9a148edfd5b30d3d55ef2564.png" title=" Usuario clicks on List Tipo del conteo" width="1366"/>
-                <img src="174cfcbc38a303f573ea6cd00c0acfcb9eccf7b4994ff4add529249c2ecd9601.png" title=" Usuario clicks on Guardar -  conteo" width="1366"/>
-                <img src="b3cd99c672c7faf4ff751e4997e76534d03aef0047345c57e3f1de7807fd3a18.png" title=" Usuario clicks on Gestionar Conteo -  conteo" width="1366"/>
-                <img src="2483a2f47182ca93543478525cb94b84801ba43c3be974b07e5a9a08e1b15424.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1366"/>
-                <img src="84547d330426017fd85724f9c35946a792bda13392723a63de05b9f35402091c.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1366"/>
-                <img src="d26dc26e0665f2da0bac2b26cf3f380b21492bbe08cb48aa8e6f69c6b764f70c.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1366"/>
-                <img src="ea741ca159bf70e7e76bc1e12728ea0c2a4a65baf635468cb7198528e58b2995.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1366"/>
-                <img src="1a172abe658f72b1c923bf195b456d1fe5bcc4f205d50260632308dc2ea75342.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1366"/>
-                <img src="e074ce7366f052e31f35393b58a8a56b2f49501d4fcdbd81b05d6305b6a77916.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1366"/>
-                <img src="7e231270f44a606dc094e091f8adc16c701c7479872525fb16e9dc6414ea3ec6.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1366"/>
-                <img src="bd098adae9fdac2ea0f9a0d20d0e677042817e7e1bb4403ad004976bcff2c9a4.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1366"/>
-                <img src="09099597f134f22ff9753915715e34e358a910352f2819d8b22ddbbd274ce56c.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1366"/>
-                <img src="6a185e13f5efc8a4e661817663eeab27fec0dc2d6fd8fb9cec880596e1416b07.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1366"/>
-                <img src="b9ae7e280231fd652ceb9a3b490d3eac50a3d733d579c7237a5d54391f2a5aa9.png" title=" Usuario btn agregar list" width="1366"/>
-                <img src="061615d2aeacb15a00fe9736b5998a0f958b89f2f9a1982e23015d4245a4eb52.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1366"/>
-                <img src="568a148483335beaf69d76c6e224940a08983895b1f771e87f0948bdde0b3939.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1366"/>
-                <img src="013cd3e8006046bef27c7e851c0fc4549712e6e8e890d6d5cc04987205c3a434.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1366"/>
-                <img src="5275d6232dedd16d415ac44d97e168c2decf943a5e77416e3fd25cf5d67572c7.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1366"/>
-                <img src="e6e2ec14589e86d86b44b378c33da4af33c972b452c3b0b4485ff404a9b79bb5.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1366"/>
-                <img src="775f37677318d66ff8b8b6189e162a5905ff9de4f3f5ef4fbc9461ad1ae1b057.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1366"/>
-                <img src="1153456c664c320b24c50b9b6c13e7ee27e8d36acbafd15c734127b4a95c9d2d.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1366"/>
-                <img src="7e1107be785d6bd4b5361fe7d1a41a321823179e699ee3952da7b04149c0223e.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1366"/>
-                <img src="6162c447ce49026cc362c6b19c7d1a32eff5300429d7f533dec60b2da55f749b.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1366"/>
-                <img src="6cdf4298587aa8cb95a4bfd8e339a4cd757840d72c85d456866e379767986b1b.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1366"/>
-                <img src="1031b238580a3827d2cf7d4b9d9f0cf30b9a7ce4e66c09efdb80bb958696d861.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1366"/>
-                <img src="ee6b59cc524d6700e4c872dc8875bef66df4b576f23f823122413e20571202ca.png" title=" Usuario btn agregar list" width="1366"/>
-                <img src="a59c21b2e4e54cff01fde06b9fccfe65772249e611c657f2cca6a9220a965a2e.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1366"/>
-                <img src="27701be847ed1564c1e8deb21b85ccaff8768f27e9b05f21599f93891e7c82eb.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1366"/>
-                <img src="a58c24572ce6d16015e3d096d01486c15f80f493037c2a72d491f5e5e21ce522.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1366"/>
-                <img src="386f21642324adbddbce83b90790fabc1db8940c4594efa253f34ec16d3dd9d5.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1366"/>
-                <img src="5a168944e02beaa8946b011f215f961c5b20752ea770db10eafd4b0423cdabb6.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1366"/>
-                <img src="40fe22774772ca9aeda24cdca2eff4ad41b963c4d0a605e41b79a228c85ed00f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1366"/>
-                <img src="b4775adbab22762082f656e6d76e8b0b668259529a34207293a9921d6f6f2562.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1366"/>
-                <img src="c77e3cb6ad986929ff3d7410bcabdfd7c0c9731a12137999a086d678ac71933d.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1366"/>
-                <img src="8cdb79f3e8db0db7356965e6ddf9b16820c17200f75393e5a691c44e0e3dacbf.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1366"/>
-                <img src="8423d28b0548aed1ef01edf121e5f29913c65bcecff7c99643b5c5509c2a8c68.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1366"/>
-                <img src="b8459b06498ca25da1004110befe0db99e93f37a384cf00fc2930ab6d02932f3.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1366"/>
-                <img src="df01fb004ef290f30f24c7a4f02c1126c32729fa2d7abf7823158a925dc6ad7e.png" title=" Usuario btn agregar list" width="1366"/>
-                <img src="23654148ddb7c70b1ea49edab9b202aa0f60e58519d6e1c275a99cee652e592b.png" title=" Usuario comparar conteos" width="1366"/>
-                <img src="23654148ddb7c70b1ea49edab9b202aa0f60e58519d6e1c275a99cee652e592b.png" title=" Usuario clicks on Comparar Conteo -  conteo" width="1366"/>
-                <img src="739c67fa47d4854427eced97937e503f99c063c6f454b3935a195aeba8551185.png" title=" Usuario clicks on Input Conteo a comparar" width="1366"/>
-                <img src="5555d571b35c36949e9c658ce39651863a007e514aa94454677aa53360b8a922.png" title=" Usuario clicks on Comparar conteos" width="1366"/>
-                <img src="1fe52c5e2ef559b3144be8d2f1bbdc5870dd1b185da0f7c4cdf7d27361db3477.png" title=" Usuario clicks on Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1366"/>
-                <img src="1fe52c5e2ef559b3144be8d2f1bbdc5870dd1b185da0f7c4cdf7d27361db3477.png" title=" Usuario comparar conteos (completed)" width="1366"/>
-                <img src="3a90d6fc7ea3419486620f07f7a869d863c8f9c738f41dfc65a196dab31dc5ea.png" title=" Usuario inputs lista cantidad (completed)" width="1366"/>
-                <img src="3a90d6fc7ea3419486620f07f7a869d863c8f9c738f41dfc65a196dab31dc5ea.png" title=" Usuario is tipo seriales03 (completed)" width="1366"/>
-                <img src="1db0ccac7fe859d4243599b3fae0029ac7c0d4b4540dbd58781a20c33ce7bb58.png" title=" Usuario clicks on Cambiar Etapa de la Auditoria: <span class='failing-color'>FAILURE</span>" width="1366"/>
+                <img src="e9c9850991c14b5d1c27e6d7b90b40dd4d4e590c49758814a45007c6b9f73452.png" title=" Dado que existe una una solicitud de auditoria" width="1920"/>
+                <img src="e9c9850991c14b5d1c27e6d7b90b40dd4d4e590c49758814a45007c6b9f73452.png" title=" Usuario ts abrir pagina" width="1920"/>
+                <img src="e9c9850991c14b5d1c27e6d7b90b40dd4d4e590c49758814a45007c6b9f73452.png" title=" Usuario opens the Ob abrir pagina" width="1920"/>
+                <img src="a0800803bac29636c65dbcf62ea804c862a5da2e4aaee422e9bdb77ca8dd1039.png" title=" Usuario enters 'jhonfquinonesa' into Input para ingresar el usuario" width="1920"/>
+                <img src="f65986decfbdc2946c9ef299c8354f929a268cfdce7a23d6f254850bf0d735b8.png" title=" Usuario enters 'Puli0010***' into Input para ingresar la contrase&ntilde;a" width="1920"/>
+                <img src="c0551f8237a4033d55e501202fc864c24740cd76c98f2ea5341d8a1a808e53c7.png" title=" Usuario clicks on button para dar ingreso al sitio" width="1920"/>
+                <img src="c0551f8237a4033d55e501202fc864c24740cd76c98f2ea5341d8a1a808e53c7.png" title=" Usuario ts abrir pagina (completed)" width="1920"/>
+                <img src="c0551f8237a4033d55e501202fc864c24740cd76c98f2ea5341d8a1a808e53c7.png" title=" Dado que existe una una solicitud de auditoria (completed)" width="1920"/>
+                <img src="5ebde734daa9c973cb1a8a849f48b20c53cee05e522f4d01d654217aabbf41b6.png" title=" Cuando Crea la orden de de auditoria" width="1920"/>
+                <img src="5ebde734daa9c973cb1a8a849f48b20c53cee05e522f4d01d654217aabbf41b6.png" title=" Usuario ts proceso auditoria" width="1920"/>
+                <img src="5ebde734daa9c973cb1a8a849f48b20c53cee05e522f4d01d654217aabbf41b6.png" title=" Usuario clicks on Bot&oacute;n de Proceso de Inventario" width="1920"/>
+                <img src="0fe0842032b927d5bb8c9e280ef98cebcbfcb117e61bad85be0dbe6866fde9a4.png" title=" Usuario clicks on Bot&oacute;n de Auditoria" width="1920"/>
+                <img src="a40056034685cc6de7d1a380a768ec59151fc3ab8eab95c820726ac61ceb7be1.png" title=" Usuario clicks on Bot&oacute;n de + para agregar auditoria" width="1920"/>
+                <img src="b78f4b7fd4b4d22c22498b4eb76ae9949887b6b1bda4169671ee6ea49d18406d.png" title=" Usuario is crear auditoria01" width="1920"/>
+                <img src="b78f4b7fd4b4d22c22498b4eb76ae9949887b6b1bda4169671ee6ea49d18406d.png" title=" Usuario enters 'Bodega Principal' into input Seleccionar la bodega" width="1920"/>
+                <img src="89a2a4d45e9f983b8b2f5848ac26fd6a24a47d60d8c619677b3993bc71b0bc8c.png" title=" Usuario clicks on Lista Seleccionar la bodega" width="1920"/>
+                <img src="43fb430b9243fa379ff696c9b80e5ea365cd9185927a9643f08e518d04ac8f70.png" title=" Usuario enters 'Auditoria' into Input de Tipo de documento" width="1920"/>
+                <img src="f10ee6820a91748ae9ccd0e12db40b85b9bd623076890a1c3b0b2db5aa383ac7.png" title=" Usuario clicks on input Lista Bot&oacute;n de Tipo de documento" width="1920"/>
+                <img src="8845a17944fb62f7e92681c6582f02df0b7edd3a847d1ee83ddf1ec9c169c2b7.png" title=" Usuario enters 'Divisi&oacute;n' into Input Divisi&oacute;n" width="1920"/>
+                <img src="6431a6612d95b00198880912d3623b3af8a533c42b6dcc2801064cfa39b0a545.png" title=" Usuario clicks on Lista Input Divisi&oacute;n" width="1920"/>
+                <img src="4d277e39681383c20da89e4a05261b157ce1b78ea9ffad418ce67f94b4c8b5da.png" title=" Usuario enters 'Familia Ejemplo' into input Familia" width="1920"/>
+                <img src="13d1f8bcf24c1823fde0a2e48799e9b75fc8f5f2b4975a1a7772ece9dda219db.png" title=" Usuario clicks on Lista Input Familia" width="1920"/>
+                <img src="dd0872830c7b3e7e6008abfe38936d7da238affa7ead5bc0001162bb2f2dddb6.png" title=" Usuario enters 'Serial' into &iacute;tem" width="1920"/>
+                <img src="e8066a7f3fb2328770b7c27e8f20d88bf8df8fe65f5ba5370850ddebafc9a192.png" title=" Usuario clicks on Lista &iacute;tem" width="1920"/>
+                <img src="210309fc57f8718bb762479d06416b672abb20857ed07190ed715332d56226dd.png" title=" Usuario clicks on Guardar Auditoria 1" width="1920"/>
+                <img src="210309fc57f8718bb762479d06416b672abb20857ed07190ed715332d56226dd.png" title=" Usuario is crear auditoria01 (completed)" width="1920"/>
+                <img src="20aaf5b973f48f27e6e1effdccb72570766f9878d2ca5eabc6537e4cc21d97f7.png" title=" Usuario is gestionar auditoria02" width="1920"/>
+                <img src="20aaf5b973f48f27e6e1effdccb72570766f9878d2ca5eabc6537e4cc21d97f7.png" title=" Usuario enters 'Conteo' into Descripci&oacute;n del conteo" width="1920"/>
+                <img src="88b58155f800620997a66a398270e94415656be5886f44de9032bd58ba6c88a9.png" title=" Usuario enters 'QA' into Observaci&oacute;n del conteo" width="1920"/>
+                <img src="8f2ed17a0583fa3ddc1cc26fb05831a19d788865bb21e33905e6a4d5b5f0207c.png" title=" Usuario enters 'Conteo inicial' into Tipo del conteo" width="1920"/>
+                <img src="c4cf22fedf092fa66b1bd9093db8d16d75cfdc2b653a316adc7a31292b88b93a.png" title=" Usuario clicks on List Tipo del conteo" width="1920"/>
+                <img src="d3c6e9895f77bb7bbe5f747b084f7194fa711fd97dd080d81a1c828ac2ec7827.png" title=" Usuario clicks on Guardar -  conteo" width="1920"/>
+                <img src="0bbaf102a40cdccffdcbd0fd00bbce0525d4071f038c2ee066a0098c6907ae47.png" title=" Usuario is tipo seriales03" width="1920"/>
+                <img src="0bbaf102a40cdccffdcbd0fd00bbce0525d4071f038c2ee066a0098c6907ae47.png" title=" Usuario inputs lista cantidad" width="1920"/>
+                <img src="0bbaf102a40cdccffdcbd0fd00bbce0525d4071f038c2ee066a0098c6907ae47.png" title=" Usuario clicks on Gestionar Conteo -  conteo" width="1920"/>
+                <img src="5179e79e6ddd6a725a9e3bbe4187b4f281f1ac575945bff208b8e06edfbf7ae6.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1920"/>
+                <img src="0397533ca3ac4c891d5b2a349a6fede30f02aa698501666d5d2f532ca95dad0d.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1920"/>
+                <img src="a9ecdeea0a860cce34ed2cd28b269b17a7ac2bf6187d8e63dad2f75068b7aa49.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1920"/>
+                <img src="e05f82ab58ecdd2f0c3e3743d50a9ae37a83f81a975414d001d9c0d711ce3eda.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1920"/>
+                <img src="4f952bfd28e2f891c10f70d861327285483e37e1cfac417e30d17fb756d66e00.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1920"/>
+                <img src="7596a32377742a45641237d214f1422afaf6778b1072e70d18c58d0f4f383d9a.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1920"/>
+                <img src="db35931b9586f24fc53f908a2cf32dbcbc6d0b6a8e8ed198fd37eaf8435f4af7.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1920"/>
+                <img src="890d444c0c71dc996dc42d4fd0ced0ea237253c8092a4be0aa84883ec15b1ebe.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1920"/>
+                <img src="b8fc411888822b7833da2eb97a0000845146438212178289392ea1d8896500b5.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1920"/>
+                <img src="97286011ce68b5fc03854b0f5aeab1c0b6cdb5b768b5cb831b14e2789a0d4bd2.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1920"/>
+                <img src="a9b4e0f526c2be29fb67420d228cdd63d30ef12b13d9d7b2dd13c130882fb762.png" title=" Usuario btn agregar list" width="1920"/>
+                <img src="86c007186ae81e76c2ed2952cedce725b455c4f7c739f339a5e2a0754b3990f8.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1920"/>
+                <img src="db2134538adee1923898be5cdcf80998d21b3c1c90754502711bc5a5ce2ef36f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1920"/>
+                <img src="ef64f12932ad9c29e9b8718bdcf4ecaa7e4847996dd465709d0f0f2f546c8f24.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1920"/>
+                <img src="66af1d895f0fe943df8113d41d01cb23aa6fe89596c50f5762eb0bc6ff118ec2.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1920"/>
+                <img src="0cee149da06a3cc970cdf20f3a1888cd8b1851d9dd85b143d66ec8e9a09921da.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1920"/>
+                <img src="a8ae772a78acb7c3b2ac59e04f68b91d80c802bbc0c92ab35eb26b877e2d44dd.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1920"/>
+                <img src="53515756c5ec620bd1147dc230831e0168e839567e0fbe0c87d20a565d49699e.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1920"/>
+                <img src="3c54fee698e8a9201f744d66d2ab7823be03b42697ad324a6f5d2a641f2336dc.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1920"/>
+                <img src="c63eb1e0094b18a6bff8f32250cae96dd81e2b9e3d4571960c1da55dbb9894ea.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1920"/>
+                <img src="f69e59491086fb58f889645b7720227475240ceb457d3cce77a1895e57680482.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1920"/>
+                <img src="9e28dbd32a20731c2acd4b535c751d950e4977dcae3077a70033f5571b690008.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1920"/>
+                <img src="213785d120417ca2e44c3a6a356c782ddacdcc4eddc04e9731778b2dd9f3cb6a.png" title=" Usuario btn agregar list" width="1920"/>
+                <img src="8b9c026315ed209413126c9936345ba1de5e3fa7ce23498913792e1daf6f00cf.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1920"/>
+                <img src="4fe12eb1d0f3e89458032410f1ed1deeb8926dee97bfb88d1ecb88ee71c0b7ad.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1920"/>
+                <img src="ac19dfbd6fa2adfcc73242ec0a2c2d92f09fb3e00f2dc61b5f83c1eee50cd0d8.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1920"/>
+                <img src="702cf55164f05ffade708005399aa6b21fe355604539f8b6985425e9520667dc.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1920"/>
+                <img src="4a3e6968979635995570a171e5955df43043f15ef3d9c53d9bfb8b4afc7e7677.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1920"/>
+                <img src="d8ad18b167d25a3917f43948b8678d564ae1a8676d93581200c5ebd0b667168f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1920"/>
+                <img src="b9d90b152d995eccabfbe96c94b9474eafd14e283dd302bb71f9e87c859aa0c9.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1920"/>
+                <img src="9d145b5cd19bf969de9d68a186fa7bbde588ecdbd5a6e3636572b4d804ac3308.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1920"/>
+                <img src="109b5e15237b19fe7a92c8d540ee39d8e72466a6d9636950cf5af4912546e971.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1920"/>
+                <img src="5c8b95bcd9fb4a9bb15d1fd0064e736016eb8d357daf579bf0748e313d5f791f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1920"/>
+                <img src="57ca667c464113ca32433ea40804a05255b03f88e79db4436ef1ed1a76f3beac.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1920"/>
+                <img src="9753886926014c5dcc7a168e3d29ac2ae7e8ed81f1701492653145e5b99f7fa9.png" title=" Usuario btn agregar list" width="1920"/>
+                <img src="7a87e144e6473a8488310892b0e8a9b4e1328bfdcc001e3508372e63746254f1.png" title=" Usuario enters 'C Numero 2' into Descripci&oacute;n del conteo" width="1920"/>
+                <img src="af62f5ab79191e3a9deee9e9c5a8f28fe46281b48614d33e070a6e3aceeaf849.png" title=" Usuario enters 'QA2' into Observaci&oacute;n del conteo" width="1920"/>
+                <img src="a2b248ba618680ab0934d287400b2a419641b0c0125da086900383b280ad62e0.png" title=" Usuario enters 'Conteo inicial' into Tipo del conteo" width="1920"/>
+                <img src="444790edf5c4a9f6a532a48d61ee00c892f59d1be4eb1108613542431578866e.png" title=" Usuario clicks on List Tipo del conteo" width="1920"/>
+                <img src="3a8b4add18c3c005ce4e2be4182e33b54d6dcbd3e49fe99786a0ab3fc60c00bb.png" title=" Usuario clicks on Guardar -  conteo" width="1920"/>
+                <img src="72d66223e0223d6a1d37619967d117508722ee2b71e122459ab9fd94fa798b43.png" title=" Usuario clicks on Gestionar Conteo -  conteo" width="1920"/>
+                <img src="cd6000659513b928186755d4c58c5908a6fef3e54285f1275e712a1b9fc6b5ad.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1920"/>
+                <img src="72d1d74401516f424cb681a92c4753be660747affed53848be1de8c7d3d7761f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1920"/>
+                <img src="7758a6be87ccb52059a66e0a74a803cb7e7e08b4040a82f93a0798af9f900ebc.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1920"/>
+                <img src="6895157d854df24d135060e2495c5cae761f4999d21ea92afe1bc0fb67532345.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1920"/>
+                <img src="5292e7d0f2a26689731ef35ffc83c7eb531dbba8bd25f9c8ba5c0da9e95bcaef.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1920"/>
+                <img src="10b65af49da319c16a7b7fe6f7828549f8156fe0845c81fe1cb82c342c78c411.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1920"/>
+                <img src="fcdac0b800d79c7241e206dca2610544a78025b0d6b1239f6aa46a40d4d486b8.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1920"/>
+                <img src="0bf15e48193eb0372fa0c1ff7f112117b56fe434fdf1182b1c3d6184eb3e13fc.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1920"/>
+                <img src="1778c88de35db236f8a066c43b8db3bba80071757b61cc700dd309bc5b3474e1.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1920"/>
+                <img src="f463364de3152e09fe150ea34c42c86ec4a302949238862b9be4d4df4bd6530d.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1920"/>
+                <img src="c38c2ca1e4323bae4642888a336653da58396a591952e1f86a1852c970182d1d.png" title=" Usuario btn agregar list" width="1920"/>
+                <img src="70ffa9a335d45b29464c1da1b6ad4cff289bc70bfa2572a73c6d6a8b8244dc90.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1920"/>
+                <img src="90009238f7f6d335fad891407613baf6189d4b81ae4b7d2920b2726b66aa96c4.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1920"/>
+                <img src="fc144dc17c569bfb0e9c84ab93da5668a1d6d3d16fe73296e29d7b56384f5de1.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1920"/>
+                <img src="934824821ffe7721d2d84fd84762573264e3c383f51a9cfd80fb991da8b5b594.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1920"/>
+                <img src="bcc9ac55b3a0a02044180165bcd9026ce9213ff0c5e5bb8595bec5560aaa65b9.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1920"/>
+                <img src="8367fd8e1aed73c8930a28903549508cfc00e7e83cbc4f5e05d27e751cb560e9.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1920"/>
+                <img src="6bb6ac06a31305a88643b7e639311e5da6af7c749fc98e15d39aa9d28ae7d5f2.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1920"/>
+                <img src="328fe53ff00c4488ce6b632cf445071a5d300c69d5af7549ff9a21eedb33fb97.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1920"/>
+                <img src="d8b09b0319efa65990948392699c5404ba6bdcff3ead0432aa129018bdf61901.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1920"/>
+                <img src="3e3b417002bd978fe1760e4798d07873315b31b7581041d0858825878d7cb681.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1920"/>
+                <img src="74641b40305f40ed99d5a60920a258ce1d22fad91e9bbddd107e08d829b537a9.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1920"/>
+                <img src="b13152e50d7a8265fd115adbb6d46484277809868ce3eb548918bc593d781fe9.png" title=" Usuario btn agregar list" width="1920"/>
+                <img src="a860a6dd1bdd5a66ba0b5944e439bd8d334d4f07491eea634bd188aa473edfd3.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1920"/>
+                <img src="5d2ad6661b32b1dade29d0e36e6c1a1a947e1d2ff34e52150f532ff564097caa.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria1" width="1920"/>
+                <img src="d0e7d31706a7d0f306199e415d22822170f9ebbbc601da8fb19134192f2a4624.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria2" width="1920"/>
+                <img src="2bac88d7aeec24ceb79fff2a27388e300bf1b387310d2a46bc94d750a43327ee.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria3" width="1920"/>
+                <img src="789b267b32d5ecdcef47a2ba8320130240620fcb9be6ff79565c5b6a9d92210f.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria4" width="1920"/>
+                <img src="d8b729e2ea24dfc0f39d0fdb3ad81d04584a80d62b2d24012300fb31ddef5563.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria5" width="1920"/>
+                <img src="104eccc7748785ac8d42707667e4fe0dd85985d2ffcbe58e4d9a9d04254091d0.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria6" width="1920"/>
+                <img src="ec754c850ac5b97763ba4e8cacc3ec3310a845da14f75e87230023c4b7ce48ed.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria7" width="1920"/>
+                <img src="0e813c1a88345b8482c50da6b6019515fe7ad980d4d0c1891af12d3526b981e0.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria8" width="1920"/>
+                <img src="8515ce674c0c46f1e9c4f29e4830d20208bf0247f88da89725b6a9848b9fec25.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria9" width="1920"/>
+                <img src="cae7b39dbb7af50bb503135d5c06fd25c85d79ac9954a60305312df860bc8386.png" title=" Usuario enters '1' into Campos de cantidad a gestionar en la auditoria10" width="1920"/>
+                <img src="578c3f9d113adfd4a8ce33400467d121446ea62869c9249af8bd3b87cec0f821.png" title=" Usuario btn agregar list" width="1920"/>
+                <img src="1b9eb39e66d72f834c648f6bfe0951c403989ae69a0b0595954a2b256884b405.png" title=" Usuario vr conteo seriales" width="1920"/>
+                <img src="1b9eb39e66d72f834c648f6bfe0951c403989ae69a0b0595954a2b256884b405.png" title=" Usuario comparar conteos" width="1920"/>
+                <img src="1b9eb39e66d72f834c648f6bfe0951c403989ae69a0b0595954a2b256884b405.png" title=" Usuario clicks on Comparar Conteo -  conteo" width="1920"/>
+                <img src="0df91f143cf5b7dd93255fecd5cbb1feedea5fe14d7fddc5f5e45254b6a14913.png" title=" Usuario clicks on Input Conteo a comparar" width="1920"/>
+                <img src="846b41725399e8d9c4d1bda540f5ee718f635d15bcf9e15544bf421b3068821d.png" title=" Usuario clicks on Comparar conteos" width="1920"/>
+                <img src="60fa439d9c8ce339cd13aba66df1d430f4cb763cae37d4a9b466999b6cf05b8c.png" title=" Usuario clicks on Agregar la cantidad del conteo que se obtuvo  Gestionar Conteo -  conteo" width="1920"/>
+                <img src="60fa439d9c8ce339cd13aba66df1d430f4cb763cae37d4a9b466999b6cf05b8c.png" title=" Usuario comparar conteos (completed)" width="1920"/>
+                <img src="38aaadf0c7aa91baa05f527ee5a7392d319a5e8acd940ffe0fbdd238fb988f87.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1920"/>
+                <img src="1bbe8b179c27a6f9c2a0c2264e29562d572c0536b95d09fd36ef86cf895e25e0.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria" width="1920"/>
+                <img src="92a265a48478de245e912a72542054320d9db906b372d6c3b1de0afa9fa81f3e.png" title=" Usuario clicks on Siguiente pagina para ver los demas productos de la auditoria: <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 
