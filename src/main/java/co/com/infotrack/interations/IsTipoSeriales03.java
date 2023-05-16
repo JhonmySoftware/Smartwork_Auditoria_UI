@@ -35,7 +35,6 @@ public class IsTipoSeriales03 implements Interaction {
 
             actor.attemptsTo(inputsListaCantidad.one());
             //UsObtenerVentanasNavegador Ventana1 = new UsObtenerVentanasNavegador(getDriver(), 0);
-
         }
 
 

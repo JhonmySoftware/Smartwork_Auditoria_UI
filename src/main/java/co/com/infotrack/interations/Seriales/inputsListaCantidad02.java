@@ -182,7 +182,7 @@ public class inputsListaCantidad02 implements Interaction {
                         throw new RuntimeException(e);
                     }
                     if (ObGestionarAuditoria.SiguientePaginaInactivo.resolveFor(actor).isDisabled()) {
-                        System.out.println("Duerme");
+                        System.out.println("Siguiente Ventana");
                         break;
                     } else {
                         try {
@@ -231,8 +231,6 @@ public class inputsListaCantidad02 implements Interaction {
             throw new RuntimeException(e);
         }
 
-        // Cerrar la ventana del navegador
-        getDriver().close();
 
 
     }

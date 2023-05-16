@@ -210,22 +210,31 @@ public class IsGestionarAuditoria02 implements Interaction {
                 System.out.println("Hay diferencia en el conteo la Auditoria se debe revisar");
             }
 
-            // Cambiar de ventana y cerrar la ventana de comparación de conteos
-            UsObtenerVentanasNavegador obtenerVentanas2 = new UsObtenerVentanasNavegador(driver, 0);
-            actor.attemptsTo(Wait.until(
-                            WebElementQuestion.the(ObGestionarAuditoria.CerrarVentanaConteos),
-                            WebElementStateMatchers.isEnabled()
-                    ).forNoLongerThan(10).seconds(),
-                    Click.on(ObGestionarAuditoria.CerrarVentanaConteos));
-
         } else {
             // El actor va a interactuar con el tipo de campo serial realizando de una vez la gestión
             System.out.println("Entro correctamente a la validación de campos seriales");
             actor.attemptsTo(IsTipoSeriales03.one());
         }
 
+        // Cambiar de ventana y cerrar la ventana de comparación de conteos
+        UsObtenerVentanasNavegador obtenerVentanas2 = new UsObtenerVentanasNavegador(getDriver(), 0);
+        actor.attemptsTo(Wait.until(
+                        WebElementQuestion.the(ObGestionarAuditoria.CerrarVentanaConteos),
+                        WebElementStateMatchers.isEnabled()
+                ).forNoLongerThan(10).seconds(),
+                Click.on(ObGestionarAuditoria.CerrarVentanaConteos));
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         // Cambiar la etapa del producto - Alistamiento
-        actor.attemptsTo(
+        actor.attemptsTo(Wait.until(
+                WebElementQuestion.the(ObGestionarAuditoria.CambiarEtapa),
+                WebElementStateMatchers.isEnabled()
+                ).forNoLongerThan(10).seconds(),
                 Click.on(ObGestionarAuditoria.CambiarEtapa),
                 Click.on(ObGestionarAuditoria.CambiarEtapaList),
                 Click.on(ObGestionarAuditoria.ContinuarCEtapa)

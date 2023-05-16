@@ -14,6 +14,7 @@ import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.Wait;
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
@@ -39,61 +40,36 @@ public class VrConteoSeriales02 implements Interaction {
                     .locatedBy("//*[@id='root']//tbody/tr[" + i + "]/td[9]"));
         }
 
-        int contador3 = 0;
-        List<String> valoresCantidad01 = new ArrayList<>();
-        while (!ListaCantidad01.isEmpty()) {
-            for (Iterator<Target> iterator = ListaCantidad01.iterator(); iterator.hasNext(); ) {
-                Target elemento = iterator.next();
-                actor.attemptsTo(Wait.until(
-                        WebElementQuestion.the(elemento),
-                        WebElementStateMatchers.isEnabled()
-                ).forNoLongerThan(1).seconds());
-                String valor = Text.of(elemento).viewedBy(actor).asString();
-                valoresCantidad01.add(valor);
-                System.out.println("Total de productos evaluados : " + valoresCantidad01.size());
-                contador3++;
-                if (ObGestionarAuditoria.SiguientePaginaInactivo.resolveFor(actor).isPresent()) {
-                    System.out.println("Se detuvo en la siguiente página");
-                    return;
-                }
-                if (contador3 % 10 == 0 && ObGestionarAuditoria.SiguientePagina.resolveFor(actor).isEnabled()) {
-                    try {
-                        actor.attemptsTo(
-                                Wait.until(
-                                        WebElementQuestion.the(ObGestionarAuditoria.SiguientePagina),
-                                        WebElementStateMatchers.isClickable()
-                                ).forNoLongerThan(5).seconds(),
-                                Scroll.to(ObGestionarAuditoria.SiguientePagina),
-                                Click.on(ObGestionarAuditoria.SiguientePagina)
-                        );
-                        ListaCantidad01 = new ArrayList<>();
-                        for (int i = 1; i <= 10; i++) {
-                            ListaCantidad01.add(Target.the("Diferencia entre conteos - Tipo seriales " + i)
-                                    .locatedBy("//*[@id='root']//tbody/tr[" + i + "]/td[9]"));
-                        }
-                    } catch (ElementClickInterceptedException e) {
-                        System.out.println("El botón Siguiente página está bloqueado");
-                        return;
-                    }
-                }else {
-                    break;
-                }
-                iterator.remove();
+        List<String> textosObtenidos = new ArrayList<>();
+        for (Target target : ListaCantidad01) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            String texto = Text.of(target).viewedBy(actor).asString();
+            textosObtenidos.add(texto);
+        }
+
+        // Luego puedes realizar las validaciones necesarias con los textos obtenidos
+        // por ejemplo, imprimirlos en la consola
+        for (String texto : textosObtenidos) {
+            System.out.println(texto);
+            if (texto.equals("0")) {
+                System.out.println("Caso de prueba Exitoso");
+            } else {
+                System.out.println("Caso de prueba No Exitoso");
             }
         }
 
-        boolean todosCeros = true;
-        for (String valor : valoresCantidad01) {
-            if (!valor.equals("0")) {
-                todosCeros = false;
-                break;
-            }
+        // Cerrar Ventana actual
+        getDriver().close();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
-        if (todosCeros) {
-            System.out.println("Se cumple el caso de prueba");
-        } else {
-            System.out.println("No se cumple el caso de prueba");
-        }
+
     }
 }
