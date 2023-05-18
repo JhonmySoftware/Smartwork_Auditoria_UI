@@ -34,7 +34,7 @@ public class TsProcesoAuditoria02 implements Task {
         }
         actor.attemptsTo(Wait.until(
                         WebElementQuestion.the(ObProcesoAuditoria.AddAuditoria),
-                        WebElementStateMatchers.isVisible()
+                        WebElementStateMatchers.isEnabled()
                 ).forNoLongerThan(10).seconds(),
                 Click.on(ObProcesoAuditoria.AddAuditoria));
 

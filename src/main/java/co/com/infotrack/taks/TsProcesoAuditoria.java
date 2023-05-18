@@ -28,10 +28,11 @@ public class TsProcesoAuditoria implements Task {
                 Click.on(ObProcesoAuditoria.Auditoria)
         );
         try {
-            Thread.sleep(8000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
         actor.attemptsTo(Wait.until(
                         WebElementQuestion.the(ObProcesoAuditoria.AddAuditoria),
                         WebElementStateMatchers.isVisible()

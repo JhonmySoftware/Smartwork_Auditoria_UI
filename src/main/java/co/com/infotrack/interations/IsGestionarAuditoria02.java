@@ -1,6 +1,8 @@
 package co.com.infotrack.interations;
 
+import co.com.infotrack.interations.CerrarVentana.CerrarVentanaAuditoria;
 import co.com.infotrack.interations.Seriales.CompararConteos;
+import co.com.infotrack.interations.cambiaretapa.CambiarEtapaAuditoria;
 import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
 import co.com.infotrack.utils.UsCargarArchivos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
@@ -53,10 +55,18 @@ public class IsGestionarAuditoria02 implements Interaction {
                 Click.on(ObGestionarAuditoria.Guardar2)
         );
 
-        String[] listadoItems1 = {"FIFO", "FEFO", "LOTE","Uvas","Polipropileno","Polietileno","Masterbatch"};
+        String[] listadoItems1 = {"FIFO", "FEFO", "LOTE", "Uvas", "Polipropileno", "Polietileno", "Masterbatch"};
+        String item = UsCargarArchivos.properties.getProperty("Item");
 
-        if (Arrays.asList(listadoItems1).contains(UsCargarArchivos.properties.getProperty("Item"))) {
-            // código a ejecutar si el valor de "Item" está en la lista de "listadoItems"
+        boolean encontrado = false;
+        for (String listItem : listadoItems1) {
+            if (listItem.equalsIgnoreCase(item)) {
+                encontrado = true;
+                break;
+            }
+        }
+        if (encontrado) {
+            // código a ejecutar si el valor de "Item" está en la lista de "listadoItems1"
             // Comparar el conteo
             try {
                 actor.attemptsTo(Click.on(ObGestionarAuditoria.CompararConteo));
@@ -230,62 +240,11 @@ public class IsGestionarAuditoria02 implements Interaction {
             throw new RuntimeException(e);
         }
 
-        // Cambiar la etapa del producto - Alistamiento
-        actor.attemptsTo(Wait.until(
-                WebElementQuestion.the(ObGestionarAuditoria.CambiarEtapa),
-                WebElementStateMatchers.isEnabled()
-                ).forNoLongerThan(10).seconds(),
-                Click.on(ObGestionarAuditoria.CambiarEtapa),
-                Click.on(ObGestionarAuditoria.CambiarEtapaList),
-                Click.on(ObGestionarAuditoria.ContinuarCEtapa)
-        );
-
-        // Cambiar la etapa del producto - Finalizado
-        actor.attemptsTo(Wait.until(
-                        WebElementQuestion.the(ObGestionarAuditoria.CambiarEtapa),
-                        WebElementStateMatchers.isEnabled()
-                ).forNoLongerThan(10).seconds(),
-                Click.on(ObGestionarAuditoria.CambiarEtapa),
-                Click.on(ObGestionarAuditoria.CambiarEtapaList),
-                Wait.until(
-                        WebElementQuestion.the(ObGestionarAuditoria.ConteoFinalizar),
-                        WebElementStateMatchers.isEnabled()
-                ).forNoLongerThan(10).seconds(),
-                Click.on(ObGestionarAuditoria.ConteoFinalizar),
-                Wait.until(
-                        WebElementQuestion.the(ObGestionarAuditoria.ConteoFinalizarList),
-                        WebElementStateMatchers.isEnabled()
-                ).forNoLongerThan(10).seconds(),
-                Click.on(ObGestionarAuditoria.ConteoFinalizarList));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        actor.attemptsTo(Click.on(ObGestionarAuditoria.FinalizarAuditoria),
-                Click.on(ObGestionarAuditoria.ContinuarCEtapa));
-
-        try {
-            Thread.sleep(8000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        // Cambiar Etapa de la Auditoria - Finalizado
+        actor.attemptsTo(CambiarEtapaAuditoria.one());
 
         // Cerrar Ventana de la Auditoria
-        actor.attemptsTo(Wait.until(
-                        WebElementQuestion.the(ObGestionarAuditoria.CrVentanaAuditoria),
-                        WebElementStateMatchers.isVisible()
-                ).forNoLongerThan(20).seconds(),
-                Click.on(ObGestionarAuditoria.CrVentanaAuditoria)
-        );
-
-        // Esperar para ver el estado de la auditoria
-        actor.attemptsTo(Wait.until(
-                WebElementQuestion.the(ObGestionarAuditoria.VrEstadoAuditoria),
-                WebElementStateMatchers.isVisible()
-        ).forNoLongerThan(20).seconds());
-
+        actor.attemptsTo(CerrarVentanaAuditoria.one());
 
     }
 }

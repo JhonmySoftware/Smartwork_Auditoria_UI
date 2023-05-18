@@ -103,7 +103,7 @@ public class inputsListaCantidad implements Interaction {
         }
         getDriver().close();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -128,7 +128,7 @@ public class inputsListaCantidad implements Interaction {
         );
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
