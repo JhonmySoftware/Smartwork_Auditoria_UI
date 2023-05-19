@@ -35,6 +35,8 @@ dependencies {
     implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
     implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
     implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:9.4.0.jre8'
+
 
 }
 gradle.startParameter.continueOnFailure = true

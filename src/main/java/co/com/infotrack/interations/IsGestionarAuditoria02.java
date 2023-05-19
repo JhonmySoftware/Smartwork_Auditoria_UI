@@ -4,6 +4,7 @@ import co.com.infotrack.interations.CerrarVentana.CerrarVentanaAuditoria;
 import co.com.infotrack.interations.Seriales.CompararConteos;
 import co.com.infotrack.interations.cambiaretapa.CambiarEtapaAuditoria;
 import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
+import co.com.infotrack.utils.ConsultaBaseDatos;
 import co.com.infotrack.utils.UsCargarArchivos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
 import net.serenitybdd.core.steps.Instrumented;
@@ -55,7 +56,15 @@ public class IsGestionarAuditoria02 implements Interaction {
                 Click.on(ObGestionarAuditoria.Guardar2)
         );
 
-        String[] listadoItems1 = {"FIFO", "FEFO", "LOTE", "Uvas", "Polipropileno", "Polietileno", "Masterbatch"};
+        ConsultaBaseDatos consultaBaseDatos = new ConsultaBaseDatos();
+        List<String> listaItems = consultaBaseDatos.consultarBaseDatos();
+
+        String[] listadoItems1 = listaItems.toArray(new String[0]);
+        // Imprimir el listado actualizado
+        for (String item : listadoItems1) {
+            System.out.println(item);
+        }
+
         String item = UsCargarArchivos.properties.getProperty("Item");
 
         boolean encontrado = false;
