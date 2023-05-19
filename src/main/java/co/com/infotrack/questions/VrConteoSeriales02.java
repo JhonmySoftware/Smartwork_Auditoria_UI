@@ -1,24 +1,14 @@
 package co.com.infotrack.questions;
 
-import co.com.infotrack.interations.Seriales.CompararConteos;
-import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
+import co.com.infotrack.interations.CompararConteos.CompararConteos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.waits.Wait;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;

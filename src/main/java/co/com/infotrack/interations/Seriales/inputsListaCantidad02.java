@@ -1,7 +1,7 @@
 package co.com.infotrack.interations.Seriales;
 
 import co.com.infotrack.questions.VrConteoSeriales02;
-import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
+import co.com.infotrack.userinterfaces.ProcesoAuditoria.ObGestionarAuditoria;
 import co.com.infotrack.utils.UsCargarArchivos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
 import net.serenitybdd.core.steps.Instrumented;

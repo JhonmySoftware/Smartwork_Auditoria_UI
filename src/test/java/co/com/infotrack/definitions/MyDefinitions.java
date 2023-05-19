@@ -1,8 +1,8 @@
 package co.com.infotrack.definitions;
 
 import co.com.infotrack.questions.VrEstadoAuditoria;
-import co.com.infotrack.taks.TsAbrirPagina;
-import co.com.infotrack.taks.TsProcesoAuditoria;
+import co.com.infotrack.taks.AbrirPaginas.TsAbrirPagina;
+import co.com.infotrack.taks.ProcesoAuditoria.TsProcesoAuditoria;
 import cucumber.api.java.Before;
 import cucumber.api.java.ast.Cuando;
 import cucumber.api.java.es.Dado;

@@ -9,6 +9,21 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ConsultaBaseDatos {
     private static final String DB_URL = "jdbc:sqlserver://35.170.118.110:1433;databaseName=SmartStockQA";
     private static final String DB_USER = "sa";
@@ -24,7 +39,13 @@ public class ConsultaBaseDatos {
         try {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT [DescripcionItem] FROM [dbo].[Item] ORDER BY DescripcionItem ASC");
+            String query = "SELECT [DescripcionItem] FROM [dbo].[Item] " +
+                    "WHERE Seriado = '0' " +
+                    "AND Serialconsecutivo = '0' " +
+                    "AND Lotes = '0' " +
+                    "AND FIFO = '0' " +
+                    "ORDER BY DescripcionItem ASC";
+            resultSet = statement.executeQuery(query);
 
             // Iterar sobre los resultados
             while (resultSet.next()) {
@@ -64,15 +85,3 @@ public class ConsultaBaseDatos {
         return listaItems;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

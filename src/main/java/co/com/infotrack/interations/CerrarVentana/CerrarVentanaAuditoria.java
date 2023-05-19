@@ -1,6 +1,6 @@
 package co.com.infotrack.interations.CerrarVentana;
 
-import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
+import co.com.infotrack.userinterfaces.ProcesoAuditoria.ObGestionarAuditoria;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

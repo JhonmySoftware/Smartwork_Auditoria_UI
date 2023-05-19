@@ -1,6 +1,6 @@
 package co.com.infotrack.questions;
 
-import co.com.infotrack.userinterfaces.ObGestionarAuditoria;
+import co.com.infotrack.userinterfaces.ProcesoAuditoria.ObGestionarAuditoria;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
