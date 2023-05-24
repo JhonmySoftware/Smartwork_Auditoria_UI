@@ -18,9 +18,9 @@ public class ObProcesoAuditoria extends PageObject {
 
     // Primera ventana para Crear Auditoría
     public static final Target Bodega = Target.the("input Seleccionar la bodega").
-            located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Bodega Principal'])[1]/following::input[2]"));
+            located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Bodega'])[1]/following::input[2]"));
     public static final Target ListBodega = Target.the("Lista Seleccionar la bodega").
-            located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Bodega Principal'])[1]/following::li[1]"));
+            located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Bodega'])[1]/following::li[1]"));
     public static final Target TipoDocumento = Target.the("Input de Tipo de documento").
             located(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Tipo Documento'])[1]/following::input[1]"));
 

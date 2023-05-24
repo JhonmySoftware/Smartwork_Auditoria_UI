@@ -103,7 +103,7 @@ public class ObGestionarAuditoria extends PageObject {
 
     // Cerrar ventana de Comparar conteos
     public static final Target CerrarVentanaConteos = Target.the("Cerrar la venta de comparación de conteos")
-            .located(By.xpath("(//button[@type='button'])[60]"));
+            .located(By.xpath("//div[@class='MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiPaper-elevation24 MuiPaper-rounded']//header[@class='MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4']//span[@class='MuiIconButton-label']//*[name()='svg']//*[name()='path' and contains(@d,'M19 6.41L1')]"));
 
     // Cambiar Etapa de la Auditoria - Finalizado
     public static final Target CambiarEtapa = Target.the("Cambiar Etapa de la Auditoria")

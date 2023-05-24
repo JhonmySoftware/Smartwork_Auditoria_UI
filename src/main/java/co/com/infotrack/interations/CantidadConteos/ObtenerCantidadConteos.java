@@ -1,6 +1,7 @@
 package co.com.infotrack.interations.CantidadConteos;
 
 import co.com.infotrack.userinterfaces.ProcesoAuditoria.ObGestionarAuditoria;
+import co.com.infotrack.userinterfaces.test.ObObtenercantidadproductos;
 import co.com.infotrack.utils.UsObtenerVentanasNavegador;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
@@ -38,8 +39,21 @@ public class ObtenerCantidadConteos implements Interaction {
                     .locatedBy("tbody tr:nth-of-type(" + rowIndex + ") td:nth-of-type(4)"));
         }
 
-// Itera sobre los Targets y obtén los valores
-        for (Target target : obtenerCantidadesProductos) {
+//        List<Target> obtenerCantidadesProductos = new ArrayList<>();
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad1);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad2);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad3);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad4);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad5);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad6);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad7);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad8);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad9);
+//        obtenerCantidadesProductos.add(ObObtenercantidadproductos.ObtenerCantidad10);
+
+        // Itera sobre los Targets y obtén los valores
+        for (int i = 0; i < obtenerCantidadesProductos.size(); i++) {
+            Target target = obtenerCantidadesProductos.get(i);
             actor.attemptsTo(
                     Wait.until(WebElementQuestion.the(target), WebElementStateMatchers.isVisible())
                             .forNoLongerThan(2).seconds()
@@ -47,6 +61,7 @@ public class ObtenerCantidadConteos implements Interaction {
             String valor = target.resolveFor(actor).getText();
             System.out.println("Valor: " + valor);
         }
+
 
 
     }
